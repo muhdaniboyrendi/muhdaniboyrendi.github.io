@@ -130,20 +130,29 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                        <strong>Thanks</strong> Your message was sended!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <form name="erlan-contact-form">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="name">
+                            <label for="nama" class="form-label">Full Name</label>
+                            <input type="text" name="nama" class="form-control" id="nama">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <div class="mb-3">
-                            <label for="Message" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="pesan" class="form-label">Message</label>
+                            <textarea class="form-control" name="pesan" id="pesan" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="submit" class="btn btn-primary btn-kirim">Send</button>
+
+                        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            <span role="status">Loading...</span>
+                          </button>
                     </form>
                 </div>
             </div>
@@ -153,7 +162,7 @@
     <footer class="bg-body-tertiary text-center mt-5">
         <section class="bg-primary">
             <!-- Whatsapp -->
-            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #64d847;" href="https://wa.me/082220633024" target="_blank" role="button"><i class="bi bi-whatsapp"></i></i></a>
+            <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #64d847;" href="https://wa.me/+6282220633024" target="_blank" role="button"><i class="bi bi-whatsapp"></i></i></a>
         
             <!-- Google -->
             <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="mailto:muhdaniboyrendi@gmail.com" role="button"><i class="bi bi-google"></i></a>
@@ -179,5 +188,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script>
+        // script for message form
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyzH7zYjHXVDsB0DjIncPO3smukF9iBAHfGR6dmMC0DK8rNrUMrX18XAuskm-YkFF9S2g/exec';
+        const form = document.forms['erlan-contact-form'];
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const alert = document.querySelector('.alert');
+
+            
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            // ketika tombol submit di klik
+            // tampiklan tombil loading dan hilangkan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                // tampilkan tombol kirim dan hilangkan tombol loading
+                btnLoading.classList.toggle('d-none');
+                btnKirim.classList.toggle('d-none');
+                // tampilkan alert
+                alert.classList.toggle('d-none');
+                // reset form
+                form.reset();
+                console.log('Success!', response);
+            })
+            .catch(error => console.error('Error!', error.message))
+        });
+    </script>
+
 </body>
 </html>
