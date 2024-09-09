@@ -15,8 +15,11 @@
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body id="home">
+    <!-- navbar -->
     <nav class="navbar fixed-top shadow navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand px-3" href="#">Erlan Azr</a>
@@ -41,7 +44,9 @@
             </div>
         </div>
     </nav>
+    <!-- end navbar -->
 
+    <!-- jumbotron -->
     <section class="jumbotron text-center">
         <img src="img/profile.jpg" alt="Muhdani Boyrendi Erlan Azhari" width="200" class="rounded-circle img-thumbnail">
         <h1 class="display-4">Muhdani Boyrendi Erlan Azhari</h1>
@@ -51,7 +56,9 @@
             </path>
         </svg>
     </section>
+    <!-- end jumbotron -->
 
+    <!-- about -->
     <section class="about" id="about">
         <div class="container">
             <div class="row text-center mb-4">
@@ -73,7 +80,9 @@
             </path>
         </svg>
     </section>
+    <!-- end about -->
 
+    <!-- projects -->
     <section id="project">
         <div class="container">
             <div class="row text-center">
@@ -81,12 +90,27 @@
                     <h2 data-aos="fade-up" data-aos-offset="300">My Projects</h2>
                 </div>
             </div>
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
                     <div class="card" data-aos="flip-left" data-aos-offset="350" data-aos-delay="200">
                         <img src="img/projects/camera.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Online Shop</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Built with</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <i class="fa-brands fa-laravel fa-2x text-danger"></i>
+                                </div>
+                                <div class="col">
+                                    <i class="fa-brands fa-bootstrap fa-2x text-primary"></i>
+                                </div>
+                                <div class="col">
+                                    <i class="fa-brands fa-bootstrap fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <br>
+                            <a href="#" class="card-link">See more &raquo;</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +118,9 @@
                     <div class="card" data-aos="flip-left" data-aos-offset="350" data-aos-delay="400">
                         <img src="img/projects/code.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Student Management</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">See more &raquo;</a>
                         </div>
                     </div>
                 </div>
@@ -102,23 +128,9 @@
                     <div class="card" data-aos="flip-left" data-aos-offset="350" data-aos-delay="600">
                         <img src="img/projects/keyboard.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" data-aos="flip-left" data-aos-offset="400">
-                        <img src="img/projects/laptop.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" data-aos="flip-left" data-aos-offset="400" data-aos-delay="200">
-                        <img src="img/projects/setup.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Movie Search with RESTAPI</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">See more &raquo;</a>
                         </div>
                     </div>
                 </div>
@@ -128,70 +140,10 @@
             <path fill="#ffffff" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,128C384,128,480,128,576,160C672,192,768,256,864,240C960,224,1056,128,1152,96C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
     </section>
+    <!-- end projects -->
 
-    <section id="gallery">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col">
-                    <h2 data-aos="fade-up" data-aos-offset="300">Galery</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/1.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="200">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/2.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="400">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/3.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="600">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/4.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="800">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/5.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="200">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/6.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="400">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/7.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="600">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/8.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="800">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/9.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="200">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="">
-                        <img src="img/gallery/thumbnail/10.jpg" alt="" class="img-fluid gallery-img" data-aos="flip-left" data-aos-offset="350" data-aos-delay="400">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="mb-5" id="contact">
+    <!-- contact -->
+    <section id="contact">
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col">
@@ -227,9 +179,14 @@
                 </div>
             </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0d6efd" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,144C384,160,480,224,576,208C672,192,768,96,864,69.3C960,43,1056,85,1152,96C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
     </section>
+    <!-- end contact -->
 
-    <footer class="bg-body-tertiary text-center mt-5">
+    <!-- footer -->
+    <footer class="text-center">
         <section class="bg-primary">
             <!-- Whatsapp -->
             <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #64d847;" href="https://wa.me/+6282220633024" target="_blank" role="button"><i class="bi bi-whatsapp"></i></i></a>
@@ -252,6 +209,7 @@
           <a class="text-light" href="https://mdbootstrap.com/">Muhdani Boyrendi Erlan Azhari</a>
         </div>
     </footer>
+    <!-- end footer -->
 
 
     <script src="js/script.js"></script>
@@ -273,7 +231,6 @@
     <script>
         gsap.registerPlugin(TextPlugin);
         gsap.to('.lead', {duration: 1.5, delay: 1.5, text: 'Web Developer'});
-        gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0});
         gsap.from('.jumbotron img', {duration: 1, rotateY: 360, opacity: 0});
         gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
     </script>
